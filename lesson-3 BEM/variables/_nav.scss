@@ -1,0 +1,63 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font;
+    font-weight: 400;
+    font-size: 15px;
+    position: absolute;
+    z-index: 2;
+    width: 80%;
+    input,label{
+        display: none;
+    }
+    input[type="checkbox"]:checked+ul{
+        left: 0;
+
+    }
+    .nav__list{
+        display: flex;
+        li{
+            padding: 30px 15px;
+        }
+        .nav__list_active{
+            font-weight: 700;
+            color: $mainColor;
+        }
+    }
+    .nav__tel{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 30px 15px;
+
+    }
+}
+
+@media(max-width:992px){
+    .nav{
+        label{
+            display: block;
+        }
+        .nav__list{
+            position: absolute;
+            flex-direction: column;
+            background-color: white;
+            top: 70px;
+            left: -100%;
+            width: 70%;
+            align-items: center;
+        }
+    }
+
+}
+@media(max-width:600px){
+    .nav{
+        .nav__list{
+            width: 100%;
+        }
+        .nav__tel{
+            p{display: none;}
+        }
+    }
+}

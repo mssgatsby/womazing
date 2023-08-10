@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: $font;
+}
+button{
+    cursor: pointer;
+}
+a{
+   color: inherit;
+   text-decoration: none;
+}
+.container{
+    margin: auto 10%;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    .card{
+        text-align: center;
+        h3{
+            padding: 20px 0;
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+}
+@media(max-width:600px){
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width:450px){
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    .container{
+        margin: auto 5%;
+    }
+}

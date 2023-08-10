@@ -1,0 +1,187 @@
+@import "../variables/variable";
+@import "../variables/constant";
+@import "../variables/mixins";
+@import "../variables/nav";
+@import "../variables/footer";
+
+.showcase{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    .showcase__content{
+        width: 45%;
+        p{
+            padding: 45px;
+        text-align: right;
+        }
+        button{
+            @include button;
+            margin-left: 35%;
+        }
+    }
+    .showcase__img{
+        padding: 120px 10% 100px 100px;
+        background-color: #F1EADC;
+        width: 50%;
+        position: relative;
+        & :nth-child(1){
+            max-width: 100%;
+        }
+        & :nth-child(2){
+            position: absolute;
+            top: 20%;
+            right:2%;
+        }
+        & :nth-child(3){
+            position: absolute;
+            bottom: 0;
+            left:-10%;
+        }
+    }
+}
+
+.collect{
+    padding: 100px 0;
+    h1{
+        margin: 50px auto;
+        text-align: center;
+    }
+    button{
+        @include button(white, 1px solid $mainColor);
+        color: $mainColor;
+        margin: 40px auto;
+        margin-left: 35%;
+        
+    }
+}
+
+
+.vajno{
+    padding: 30px 0;
+    h1{
+        margin: 30px 0;
+    }
+    .cards{
+        .card{
+        text-align: left;
+        }
+    }
+}
+
+.group{
+    padding: 50px 0;
+    h1{
+        margin: 50px 0;
+    }
+    .group__content{
+        display: flex;
+        gap: 50px;
+        img{
+            width: 45%;
+            object-fit: contain;
+        }
+        .text{
+            width: 40%;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            a{
+                color: $mainColor;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px){
+    .showcase{
+        flex-direction: column-reverse;
+        .showcase__content{
+            width: 100%;
+            p{
+                padding: 0;
+            }
+        }
+        .showcase__img{
+            width: 100%;
+            margin: 0;
+
+
+            & :nth-child(1){
+                width: 100%;
+            }
+            & :nth-child(2){
+                display: none;
+            }
+            & :nth-child(3){
+                display: none;
+
+            }
+        }
+    }
+    .group{
+        .group__content{
+            flex-direction: column;
+            img{
+                width: 100%;
+            }
+            .text{width: 100%;}
+        }
+    }
+}
+@media(max-width:600px){
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width:450px){
+    .cards{
+        grid-template-columns: 1fr;
+    }
+}

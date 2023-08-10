@@ -1,0 +1,31 @@
+@import "../variables/variable";
+@import "../variables/constant";
+@import "../variables/mixins";
+@import "../variables/nav";
+@import "../variables/footer";
+
+.main{
+    padding: 200px 0;
+}
+
+.categ{
+    display: flex;
+    padding: 50px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+    button{
+        @include button(white, 1px solid #000);
+        color:#000;
+        
+    }
+    .button_active{
+        background-color: #000;
+        color: aliceblue;
+        border: none;
+    }
+}
+
+.cards{
+    padding: 30px 0;
+}
+

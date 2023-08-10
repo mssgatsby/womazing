@@ -1,0 +1,92 @@
+@import "../variables/variable";
+@import "../variables/constant";
+@import "../variables/mixins";
+@import "../variables/nav";
+@import "../variables/footer";
+
+.main{
+    padding: 200px 0;
+    h1{
+        padding-bottom: 30px;
+    }
+}
+
+.categ{
+    display: flex;
+    padding: 20px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+    button{
+        @include button(white, 1px solid #000);
+        color:#000;
+        padding: 20px;
+        
+    }
+    .button_active{
+        background-color: #000;
+        color: aliceblue;
+        border: none;
+    }
+}
+
+.svitshot{
+    display: flex;
+    gap:50px;
+    align-items: center;
+    img{
+        width: 45%;
+        object-fit: contain;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h1{
+            color: gray;
+            font-weight: lighter;
+        }
+        .color{
+            display: flex;
+            gap: 10px;
+            .circle{
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: $mainColor;
+            }
+        }
+        &>button{
+            @include button  ;
+        }
+    }
+
+}
+.tovar{
+    padding: 100px 0;
+    h1{
+        margin: 50px auto;
+        // text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:600px){
+    .svitshot{
+        flex-direction: column;
+        gap: 20px;
+        img, .text{
+            width: 100%;
+        }
+    }
+}
+
